@@ -4,5 +4,5 @@ class Show < ActiveRecord::Base
   end
   
   def most_popular_show
-    Show.find("name") WHERE maximum("rating")
+     Show.order(rating: :desc).first
 end 
